@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Account – WebPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="auth-page">
+
+    <!-- ===== LEFT: brand / message panel ===== -->
+    <section class="auth-side">
+      <a href="index.html" class="auth-side__logo">WAYPA</a>
+      <div class="auth-side__inner">
+        <h1 class="auth-side__title">Discover your ideal web development career path</h1>
+        <p class="auth-side__text">A career preference system built for BSIT graduates in the Philippines.</p>
+      </div>
+    </section>
+
+    <!-- ===== RIGHT: sign up form ===== -->
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <h2 class="auth-card__title">Create your account</h2>
+        <p class="auth-card__subtitle">Free to join. Start learning right away.</p>
+
+        <p class="auth-form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+        <form id="signupForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+              <span class="field-error-msg" id="firstNameError"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+              <span class="field-error-msg" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="field-error-msg" id="emailError"></span>
+          </div>
+
+          <div class="field">
+            <label for="school">School/University</label>
+            <input type="text" id="school" name="school" autocomplete="organization" required>
+            <span class="field-error-msg" id="schoolError"></span>
+          </div>
+
+          <div class="field">
+            <label for="yearLevel">Year level/Status</label>
+            <input type="text" id="yearLevel" name="yearLevel" required>
+            <span class="field-error-msg" id="yearLevelError"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" autocomplete="new-password" required minlength="8">
+              <span class="field-error-msg" id="passwordError"></span>
+            </div>
+            <div class="field">
+              <label for="confirmPassword">Confirm password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" required>
+              <span class="field-error-msg" id="confirmPasswordError"></span>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+            <label for="agreeTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+          <span class="field-error-msg" id="agreeTermsError"></span>
+
+          <button type="submit" class="auth-submit">Create Account</button>
+
+          <p class="auth-switch">Already have an account? <a href="signin.html">Sign In</a></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
